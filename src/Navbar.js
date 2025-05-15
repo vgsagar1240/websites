@@ -1,124 +1,109 @@
-import React, { useEffect, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import MenuIcon from "@mui/icons-material/Menu";
-import PhoneIcon from "@mui/icons-material/Phone";
+import React, { useState, useEffect, useRef } from "react";
 import "./Navbar.css";
+import LOGO from "./assets/logo.png";
+import { FiPhone } from "react-icons/fi";
 
-function Navbar() {
-  const location = useLocation();
-  const navigate = useNavigate();
-  const [scrolled, setScrolled] = useState(false);
-  const [hidden, setHidden] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(window.scrollY);
+const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [showScrolledNavbar, setShowScrolledNavbar] = useState(false);
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
-
-  const handleScroll = () => {
-    const currentY = window.scrollY;
-
-    if (window.innerWidth >= 768) {
-      setScrolled(currentY > 50);
-      setHidden(currentY > lastScrollY && currentY > 100);
-    } else {
-      setScrolled(false);
-      setHidden(false);
-    }
-
-    setLastScrollY(currentY);
-  };
+  const lastScrollYRef = useRef(window.scrollY);
 
   useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const goingDown = currentScrollY > lastScrollYRef.current;
+
+      // Set scrolled navbar visibility
+      setScrolled(currentScrollY > 50);
+
+      if (!isMobile) {
+        if (goingDown && currentScrollY > 1000) {
+          setShowScrolledNavbar(false);
+        } else if (!goingDown) {
+          setShowScrolledNavbar(true);
+        }
+      }
+
+      lastScrollYRef.current = currentScrollY;
+    };
+
+    window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isMobile]);
+
+  const closeMenu = () => setMenuOpen(false);
 
   return (
-    <nav
-      className={`navbar ${hidden ? "navbar--hidden" : ""} ${
-        scrolled ? "navbar--scrolled" : "navbar--transparent"
-      }`}
-    >
-      <div
-        className={`navbar-logo ${
-          scrolled ? "navbar-logo--left" : "navbar-logo--center"
-        }`}
-        onClick={() => navigate("/")}
-        style={{ cursor: "pointer" }}
-      >
-        <img src="/Aasritha_logo.png" alt="Logo" />
-        <span className="logo-text">AASRITHA INFRA</span>
-      </div>
+    <>
+      {(!scrolled || isMobile) && (
+        <nav className="navbar main-navbar">
+          <div className="navbar-logo">
+            <img src="/assets/logo.png" alt="logo" className="logo-img1" />{" "}
+          </div>
+          <div className="hamburger" onClick={() => setMenuOpen(true)}>
+            &#9776;
+          </div>
+        </nav>
+      )}
 
-      <div className="navbar-right">
-        <ul className="navbar-links">
-          <li>
-            <Link to="/" className={location.pathname === "/" ? "active" : ""}>
-              HOME
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/about"
-              className={location.pathname === "/about" ? "active" : ""}
-            >
-              ABOUT US
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/projects"
-              className={location.pathname === "/projects" ? "active" : ""}
-            >
-              PROJECT
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/contact"
-              className={location.pathname === "/contact" ? "active" : ""}
-            >
-              CONTACT
-            </Link>
-          </li>
-        </ul>
-        <div className="navbar-phone">
-          <PhoneIcon fontSize="small" />
-        </div>
-      </div>
+      {/* Scrolled Navbar for Desktop */}
+      {!isMobile && scrolled && showScrolledNavbar && (
+        <nav className="navbar scrolled-navbar">
+          <div className="navbar-logo">
+            <img src={LOGO} alt="logo" className="logo-img" />
+          </div>
+          <div className="nav-links-inline">
+            {/* //{({isActive}) => isActive ? 'nav-links-inline': 'nav-link1'} */}
+            <span>HOME</span>
+            <span>ABOUT US</span>
+            <span>PROJECT</span>
+            <span>CONTACT</span>
+            <span className="contact_icon">
+              {" "}
+              <FiPhone />{" "}
+            </span>
+          </div>
+        </nav>
+      )}
 
-      <div className="navbar-hamburger" onClick={toggleMenu}>
-        <MenuIcon style={{ color: "black" }} />
-      </div>
-
+      {/* Popup Menu for Mobile and  desktop*/}
       {menuOpen && (
-        <div className="mobile-menu">
-          <ul>
-            <li>
-              <Link to="/" onClick={toggleMenu}>
-                HOME
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" onClick={toggleMenu}>
-                ABOUT US
-              </Link>
-            </li>
-            <li>
-              <Link to="/projects" onClick={toggleMenu}>
-                PROJECT
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" onClick={toggleMenu}>
-                CONTACT
-              </Link>
-            </li>
-          </ul>
+        <div className="menu-overlay">
+          <div className="menu-content">
+            <div className="left-section">
+              <div className="popup-logo">
+                <img src={LOGO} alt="logo" className="logo-img1" />
+              </div>
+            </div>
+            <div className="divider" />
+            <div className="right-section">
+              <ul className="nav-links">
+                <li onClick={closeMenu}>Home</li>
+                <li onClick={closeMenu}>About</li>
+                <li onClick={closeMenu}>Services</li>
+                <li onClick={closeMenu}>Contact</li>
+              </ul>
+            </div>
+            <div className="close-icon" onClick={closeMenu}>
+              &times;
+            </div>
+          </div>
         </div>
       )}
-    </nav>
+    </>
   );
-}
+};
 
 export default Navbar;

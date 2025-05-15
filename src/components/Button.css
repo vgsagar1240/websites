@@ -1,0 +1,30 @@
+.styled-button {
+  writing-mode: vertical-lr; /* Vertical text, top to bottom */
+  text-orientation: upright;
+
+  background: linear-gradient(to bottom, #4a0a14, #a147b8); /* Gradient from maroon to purple */
+  color: white;
+  border: none;
+  padding: 10px 10px;
+
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+
+  font-weight: 500;
+  letter-spacing: 2px;
+  cursor: pointer;
+
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.styled-button:hover {
+  opacity: 0.9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
