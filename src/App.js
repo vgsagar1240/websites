@@ -1,4 +1,3 @@
-// App.js
 import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
@@ -6,12 +5,22 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
-import Home from "./pages/Home";
+
+// Page Components
+// import Home from "./pages/Home";
+
+import Home from "./pages/home/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+
+// UI Components
 import Navbar from "./Navbar";
+import Footer from "./components/footer";
 import Loader from "./loader";
+import WhatsAppButton from "./components/WhatsAppButton";
+import Button from "./components/button";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function LoaderWrapper({ children }) {
   const location = useLocation();
@@ -19,7 +28,7 @@ function LoaderWrapper({ children }) {
 
   useEffect(() => {
     setLoading(true);
-    const timer = setTimeout(() => setLoading(false), 3000); // loader duration
+    const timer = setTimeout(() => setLoading(false), 3000);
     return () => clearTimeout(timer);
   }, [location]);
 
@@ -37,6 +46,9 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Button />
+        <Footer />
+        <WhatsAppButton />
       </LoaderWrapper>
     </Router>
   );

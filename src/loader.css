@@ -34,11 +34,6 @@
   backface-visibility: hidden;
 }
 
-.logo {
-  width: 140px;
-  height: auto;
-}
-
 .flip-icon {
     width: 80px;
     height: 80px;
@@ -47,6 +42,6 @@
   }
   
   .logo {
-    height: 60px;
+    height: 200px;
     width: auto;
   }

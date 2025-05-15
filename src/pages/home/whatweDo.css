@@ -1,0 +1,214 @@
+/* .wedo{
+    height: 801px;
+    width: auto;
+    background-color: #F0F0F0;
+    margin-top: 20px;
+}
+
+.wedoHead{
+    font-weight: 300;
+    font-size: 53px;
+    letter-spacing: 0.5px;
+    padding-top: 318px;
+    padding-left: 80px;
+    height: 144px;
+
+} */
+
+.wedo-container {
+    width: 100%;
+    /* max-width: 100vh; */
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    height: 700px;
+    padding: 2rem;
+    background-color: #F0F0F0;
+    overflow: hidden;
+  }
+  
+  .wedo {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .wedo-left {
+    width: 40%;
+  }
+  
+  .wedoHead {
+    font-weight: 300;
+    font-size: 48px;
+    letter-spacing: 0.5px;
+    padding-top: 218px;
+    padding-left: 80px;
+    height: 144px;
+  }
+  
+  .wedo-right {
+    width: 60%;
+  }
+  
+  /* Step Pattern Styling */
+  .step-row {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    margin-bottom: 2rem;
+    gap: 30px;
+  }
+  
+  .step-item {
+    width: 192px;
+    height: 247px;
+    aspect-ratio: 1/1;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .step-label {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 8px 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); 
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .step-item:hover {
+    transform: scale(1.25);
+  }
+  
+  .step-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  
+  .step-item.first {
+    margin-top: 0;
+    z-index: 3;
+  }
+  
+  .step-item.second {
+    margin-top: 40px; 
+    margin-left: -20px;
+    z-index: 2;
+  }
+  
+  .step-item.third {
+    margin-top: 80px; 
+    margin-left: -20px;
+    z-index: 1;
+  }
+  
+  .bottom-row {
+    margin-top: -40px; 
+  }
+
+  /* responsive css */
+/* Tablet View (768px and up) */
+@media (min-width: 768px) {
+    .wedo {
+        flex-direction: row; /* Side by side on tablet+ */
+    }
+
+    .wedo-left {
+        width: 40%;
+        padding-left: 1rem;
+    }
+
+    .wedoHead {
+        font-size: 2.8rem;
+        padding-top: 8rem;
+        text-align: left;
+        padding-left: 1rem;
+    }
+
+    .wedo-right {
+        width: 60%;
+        padding-right: 1rem;
+    }
+
+    .step-row {
+        justify-content: flex-end;
+        gap: 15px;
+    }
+
+    .step-item {
+        width: 140px;
+        height: 180px;
+    }
+
+    .step-item.second {
+        margin-top: 20px;
+        margin-left: -10px;
+        z-index: 2;
+    }
+
+    .step-item.third {
+        margin-top: 40px;
+        margin-left: -10px;
+        z-index: 3;
+    }
+
+    .bottom-row {
+        margin-top: -20px;
+    }
+}
+
+/* Desktop View (1024px and up) */
+@media (min-width: 1024px) {
+    .wedo-container {
+        padding: 2rem;
+    }
+
+    .wedoHead {
+        font-size: 3rem;
+        padding-top: 12rem;
+        padding-left: 2rem;
+    }
+
+    .step-row {
+        gap: 20px;
+    }
+
+    .step-item {
+        width: 160px;
+        height: 207px;
+    }
+
+    .step-item.second {
+        margin-top: 30px;
+    }
+
+    .step-item.third {
+        margin-top: 60px;
+    }
+
+    .bottom-row {
+        margin-top: -30px;
+    }
+}
+
+/* Large Desktop View (1200px and up) */
+@media (min-width: 1200px) {
+    .wedoHead {
+        font-size: 3.5rem;
+        padding-top: 14rem;
+    }
+
+    .step-item {
+        width: 180px;
+        height: 230px;
+    }
+}
+
+  

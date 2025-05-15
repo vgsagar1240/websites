@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+  }
+  
+   .landing-container {
+    width: 100%;
+    /* max-width: 1440px; */
+    height: 100vh;
+    margin: 0 auto;        
+    overflow: hidden;
+  }
+  
+  .landing-image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;     
+    object-position: bottom; 
+    display: block;
+    overflow-x: hidden;
+    /* background-size: cover; */
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* About Section Container */
+  .about-container {
+    position: relative;
+    height: 550px;
+    width: 100vw;
+    background-image: url('../../assets/about_us.png');
+    background-size: contain;
+    /* background-position: center; */
+    background-color: #FFFFFF;
+    background-repeat: no-repeat;
+    display: block;
+    overflow: hidden;
+    /* border: 2px solid red; */
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+  .about_heading{
+    position: absolute;
+    top: 76px;
+    left: 80px;
+    font-size: 53px;
+    font-weight: 300;
+    letter-spacing: 10%;
+  }
+  .about-description {
+    position: absolute;
+    text-align: center;
+    top: 251px;
+    left: 243px;
+    transform: translateY(-50%);
+    max-width: 500px;
+    line-height: 1.4;
+    font-size: 19px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+  }
+  
+  .highlight {
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 100%; 
+    letter-spacing: 0.5px;
+    color: #020000;
+  }
+
+  .about-button {
+  position: absolute;
+  top: 450px;
+  left: 80px;
+  width: 190px;
+  height: 54px;
+  font-size: 20px;
+  font-weight: 300;
+  color: #000000;
+  background: linear-gradient(to top, #ffffff, #cfc9c9);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Text Layer */
+.about-button span {
+  position: relative;
+  z-index: 2;
+}
+
+/* Gradient border using ::before */
+.about-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px; /* 5px border thickness */
+  border-radius: 12px;
+  background: linear-gradient(to right, #ffffff, #690089);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: 0;
+  pointer-events: none;
+    top: 5px;
+  left: 5px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+}
+
+/* Optional: Hover effect */
+.about-button:hover {
+  background: #690089;
+  color: #ffffff;
+}
+
+.about-button:hover::before {
+  background: linear-gradient(to left, #ffffff, #690089);
+}
+
+
+  @media (max-width: 768px) {
+    .landing-container {
+        height: 70vh; 
+      }
+
+    .about-heading {
+      font-size: 24px;
+      top: 20px;
+      left: 20px;
+    }
+  
+    .about-description {
+      left: 20px;
+      right: 20px;
+      max-width: 100%;
+      font-size: 14px;
+      text-align: left;
+    }
+  
+    .about-button {
+      bottom: 20px;
+      left: 20px;
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  }

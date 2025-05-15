@@ -1,0 +1,25 @@
+.text_field1{
+    background-color: #ffffff;
+    margin-top:  40px;
+    height: 157px;
+    width: 100vw;
+ }
+
+ .text_field1 p{
+    text-align: center;
+    font-size: 26px;
+    font-weight: 300;
+    letter-spacing: 10%;
+    line-height: 100%;
+    padding-top: 29px;
+    color: #000000;
+ }
+
+ .text_field1 span{
+    font-size: 26px;
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: 10%;
+    line-height: 100%;
+    padding-top: 29px;
+ }
