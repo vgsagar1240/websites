@@ -10,8 +10,8 @@ import {
 // import Home from "./pages/Home";
 
 import Home from "./pages/home/Home";
-import About from "./pages/About";
-import Projects from "./pages/Projects";
+import OurStory from "./pages/About";
+import OurProjects from "./pages/Projects";
 import Contact from "./pages/Contact";
 
 // UI Components
@@ -42,8 +42,8 @@ function App() {
       <LoaderWrapper>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/about" element={<OurStory />} />
+          <Route path="/projects" element={<OurProjects />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Button />

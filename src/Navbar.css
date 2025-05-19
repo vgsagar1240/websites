@@ -7,8 +7,8 @@
     overflow-x: hidden;
   }
   
-  /* Navbar container */
-  .navbar {
+  /* navbar1 container */
+  .navbar1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,7 +23,7 @@
   }
   
   /* Logo */
-  .navbar-logo {
+  .navbar1-logo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,14 +48,14 @@
     border: none;
   }
   
-  /* Main Navbar */
-  /* .main-navbar {
+  /* Main navbar1 */
+  /* .main-navbar1 {
     background-color: white;
     border-bottom: 1px solid #ddd;
   } */
   
-  /* Scrolled Navbar */
-  .scrolled-navbar {
+  /* Scrolled navbar1 */
+  .scrolled-navbar1 {
     background-color: #000000;
     color: white;
     height: 96px;
@@ -66,20 +66,24 @@
   }
   
   /* Inline nav links for desktop */
-  .nav-links-inline span {
+ .nav-links-inline .nav-item {
     margin: 0 1rem;
     cursor: pointer;
     opacity: 0;
     transform: translateY(-20px);
-    /* display: inline-block; */
     animation: slideIn 0.5s forwards;
+    text-decoration: none;
+    color: inherit;
   }
+  
 
-.nav-links-inline span:nth-child(1) { animation-delay: 0.2s; }
-.nav-links-inline span:nth-child(2) { animation-delay: 0.4s; }
-.nav-links-inline span:nth-child(3) { animation-delay: 0.6s; }
-.nav-links-inline span:nth-child(4) { animation-delay: 0.8s; }
-.nav-links-inline span:nth-child(5) { animation-delay: 1s; }
+  
+
+.nav-links-inline .nav-item:nth-child(1) { animation-delay: 0.2s; }
+.nav-links-inline .nav-item:nth-child(2) { animation-delay: 0.4s; }
+.nav-links-inline .nav-item:nth-child(3) { animation-delay: 0.6s; }
+.nav-links-inline .nav-item:nth-child(4) { animation-delay: 0.8s; }
+.nav-links-inline .nav-item:nth-child(5) { animation-delay: 1s; }
 
 @keyframes slideIn {
   to {
@@ -220,5 +224,6 @@
     justify-content: center; */
     text-align: center;
   }
+  
   
   

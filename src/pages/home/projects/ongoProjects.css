@@ -1,225 +1,223 @@
-.onGo_Container{
-    margin-top: 10px;
-    width: 100%;
-    height: 800px;
-    background-color: #F0F0F0;
-}
-.project_head{
-    font-family: open sans-serif;
-    font-weight: 400;
-    font-size: 45px;
-    text-align: center;
-    color: #00000080;
-    letter-spacing: 10%;
-    padding-top: 35px;
-}
-.project_description{
-    font-family: Open sans-serif;
-    font-weight: 600;
-    text-align: center;
-    font-size: 20px;
-    letter-spacing: 20%;
-    text-transform: uppercase;
-    font-weight: 600;
-    padding-top: 15px;
+.onGo_Container {
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+  background-color: #F0F0F0;
+  overflow-x: hidden;
 }
 
-/* slider css */
-/* From Uiverse.io by arshshaikh06 */ 
+.project_head {
+  font-family: open sans-serif;
+  font-weight: 400;
+  font-size: 45px;
+  text-align: center;
+  color: #00000080;
+  letter-spacing: 10%;
+  padding-top: 35px;
+}
+
+.project_description {
+  font-family: Open sans-serif;
+  font-weight: 600;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 20%;
+  text-transform: uppercase;
+  padding-top: 15px;
+}
+
+/* Slider container */
 .container1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-    box-sizing: border-box;
-    font-family: sans-serif;
-  }
-  
-  .palette {
-    display: flex;
-    height: 500px;
-    width: 100%;
-    max-width: 1200px;
-    gap: 10px;
-  }
-  
-  .card {
-    position: relative;
-    border-radius: 1em;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-    flex: 0.2;
-    cursor: pointer;
-  }
-  
-  .card.active {
-    flex: 1;
-  }
-  
-  .card .image-container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
-  
-  .card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  .top-tag {
-    display: none;
-  }
-  
-  .top-tag {
-    position: absolute;
-    top: 24px;
-    right: 10px;
-    background: black;
-    color: #ffffff;
-    padding: 10px 10px;
-    border-radius: 20px;
-    font-size: 15px;
-    font-weight: 700;
-    font-family: open sans-serif;
-  }
-  
-  .content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 131px;
-    background: #000000CC;
-    display: flex;
-    border-radius: 20px;
-    align-items: center;
-    padding: 0 20px;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-  }
-  
-  .logo1 {
-    width: 50px;
-    height: 50px;
-    background: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 20px;
-    flex-shrink: 0;
-  }
-  
-  .content-center {
-    flex: 1;
-    color: #FFFFFF;
-    text-align: center;
-    font-weight: 400;
-    font-size: 20px;
-    font-family: sans-serif;
-    line-height: 100%;
-    letter-spacing: 0.5px;
-    padding-top: 5px;
-  }
-
-  
-  .content-center span {
-    color: #FFFFFF;
-    text-align: center;
-    font-weight: 700;
-    font-size: 20px;
-    font-family: sans-serif;
-    line-height: 100%;
-    padding-top: 10px;
-  }
-  
-  .content-center p {
-    margin: 0;
-    font-size: 14px;
-    opacity: 0.8;
-  }
-  
-  .card:hover {
-    flex: 1;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card:hover img {
-    transform: scale(1.05);
-  }
-  
-  .card:hover .content {
-    transform: translateY(0);
-  }
-  
-  .card:hover ~ .card:not(:hover),
-  .card:not(:hover) {
-    flex: 0.2;
-  }
-  
-  /* Remove active content when not hovering */
-  .card.active:not(:hover) .content {
-    transform: translateY(100%);
-  }
-
-  .card:hover ~ .card,
-.card:not(:hover):not(.active) {
-  flex: 0.2;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  overflow: hidden;
 }
 
-/* Reset .active card if not hovered */
-.card.active:not(:hover) {
+/* Card slider */
+.palette {
+  display: flex;
+  height: 500px;
+  width: 100%;
+  max-width: 1200px;
+  gap: 10px;
+}
+
+/* Individual card */
+.card {
+  position: relative;
+  border-radius: 1em;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  flex: 0.2;
+  cursor: pointer;
+}
+
+.card.active {
   flex: 1;
 }
 
-/* If any other card is hovered, make .active shrink */
-.palette:hover .card.active:not(:hover) {
-  flex: 0.2;
+/* Image setup */
+.card .image-container,
+.card .image-container1 {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Top tag */
+.top-tag {
+  position: absolute;
+  top: 24px;
+  right: 10px;
+  background: black;
+  color: #ffffff;
+  padding: 10px 10px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: open sans-serif;
+  display: none;
+}
+
+/* Show top-tag on active or hover */
 .card:hover .top-tag,
 .card.active .top-tag {
   display: block;
 }
 
-/* Content is hidden by default */
+/* Card content panel */
 .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 131px;
+  background: #000000CC;
+  display: flex;
+  border-radius: 20px;
+  align-items: center;
+  padding: 0 20px;
   transform: translateY(100%);
   transition: transform 0.3s ease;
 }
 
-/* Show content for the active (first) card */
-.card.active .content {
-  transform: translateY(0);
+.logo1 {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  flex-shrink: 0;
 }
 
+.content-center {
+  flex: 1;
+  color: #FFFFFF;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: sans-serif;
+  line-height: 100%;
+  letter-spacing: 0.5px;
+  padding-top: 5px;
+}
 
+.content-center span {
+  color: #FFFFFF;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: sans-serif;
+  line-height: 100%;
+  padding-top: 10px;
+}
 
-  /* Show it on hover or if it's the active card */
+.content-center p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Hover behaviors */
+.card:hover {
+  flex: 1;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
 .card:hover .content,
 .card.active .content {
   transform: translateY(0);
 }
-  
-  @media (max-width: 768px) {
-    .palette {
-      flex-direction: column;
-      height: auto;
-    }
-    
-    .card {
-      width: 100%;
-      height: 80px;
-    }
-    
-    .card.active,
-    .card:hover {
-      height: 300px;
-      flex: 1;
-    }
+
+/* Reset other cards when hovering */
+.card:hover ~ .card:not(:hover),
+.card:not(:hover) {
+  flex: 0.2;
+}
+
+.card.active:not(:hover) {
+  flex: 1;
+}
+
+.palette:hover .card.active:not(:hover) {
+  flex: 0.2;
+}
+
+/* MOBILE SUPPORT */
+@media (max-width: 768px) {
+  .palette {
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
   }
+
+  .palette::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card {
+    flex: 0 0 auto;
+    min-width: 300px;
+    height: 100%;
+    scroll-snap-align: start;
+  }
+
+  .card:hover,
+  .card.active {
+    flex: 0 0 100%;
+    height: 100%;
+  }
+
+  .container1 {
+    padding: 10px;
+  }
+}
+
+.cent{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
