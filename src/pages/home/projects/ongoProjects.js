@@ -137,7 +137,7 @@ const OngoProjects = () => {
           </div>
         </div>
 
-        <div className="flex justify-center">
+        <div className="ongobtn">
           <CustomButton
             text="Know More"
             onClick={() => console.log("Clicked")}

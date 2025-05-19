@@ -59,33 +59,22 @@ const Navbar = () => {
         </nav>
       )}
 
-      {!isMobile && scrolled && showScrolledNavbar && (
-        <nav className="navbar1 scrolled-navbar1">
-          <div className="navbar1-logo">
-            <Link to="/">
-              <img src={LOGO} alt="logo" className="logo-img" />
-            </Link>
-          </div>
-          <div className="nav-links-inline">
-            <Link to="/" className="nav-item">
-              HOME
-            </Link>
-            <Link to="/about" className="nav-item">
-              ABOUT US
-            </Link>
-            <Link to="/projects" className="nav-item">
-              PROJECT
-            </Link>
-            <Link to="/contact" className="nav-item">
-              CONTACT
-            </Link>
+        {!isMobile && scrolled && (
+  <nav className={`navbar1 scrolled-navbar1 ${showScrolledNavbar ? 'show' : ''}`}>
+    <div className="navbar1-logo">
+      <Link to="/">
+        <img src={LOGO} alt="logo" className="logo-img" />
+      </Link>
+    </div>
+    <div className="nav-links-inline">
+      <Link to="/" className="nav-item">HOME</Link>
+      <Link to="/about" className="nav-item">ABOUT US</Link>
+      <Link to="/projects" className="nav-item">PROJECT</Link>
+      <Link to="/contact" className="nav-item">CONTACT</Link>
+    </div>
+  </nav>
+)}
 
-            {/* <span className="contact_icon">
-              <FiPhone />
-            </span> */}
-          </div>
-        </nav>
-      )}
 
       {menuOpen && (
         <div className="menu-overlay">

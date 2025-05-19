@@ -37,6 +37,11 @@
   font-family: sans-serif;
   overflow: hidden;
 }
+.ongobtn{
+  display: flex;
+  justify-content: center !important;
+  margin-right: 120px;
+}
 
 /* Card slider */
 .palette {

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaCity, FaHome, FaBuilding, FaHotel } from "react-icons/fa";
 import "./loader.css";
+import LOGO from "./assets/logo.png";
 
 const icons = [
   <FaBuilding key="building" />,
@@ -35,7 +36,7 @@ const Loader = () => {
       <div className={`flip-box ${flipState ? "flipping" : ""}`}>
         <div className="flip-content">{icons[index]}</div>
       </div>
-      <img src="/Aasritha_logo.png" alt="Logo" className="logo" />
+      <img src={LOGO} alt="Logo" className="logo" />
     </div>
   );
 };
