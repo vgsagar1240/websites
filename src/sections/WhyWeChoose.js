@@ -1,5 +1,6 @@
 import React from "react";
 import "./WhyWeChoose.css";
+import CustomButton from "../components/CustomButton";
 
 const whyWeChooseItems = [
   {
@@ -69,7 +70,9 @@ const WhyWeChoose = () => {
       <div className="section-bottom">
         <h3 className="display-4">CREATING TOMORROW’S LANDMARKS</h3>
         <p className="display-5">WITH TODAY’S VISION AND PRECISION.</p>
-        <button className="enquiry-button">Enquiry</button>
+        <div className="flex justify-center" style={{ marginRight: "17%" }}>
+          <CustomButton text="Enquiry" onClick={() => console.log("Clicked")} />
+        </div>
       </div>
     </section>
   );

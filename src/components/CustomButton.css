@@ -1,0 +1,45 @@
+/* CustomButton.css */
+.about-button {
+  width: 190px;
+  height: 54px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #000000;
+  background: linear-gradient(to top, #ffffff, #cfc9c9);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.about-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: 12px;
+  background: linear-gradient(to right, #ffffff, #690089);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: 0;
+  pointer-events: none;
+  top: 5px;
+  left: 5px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+}
+
+.about-button:hover {
+  background: #690089;
+  color: #ffffff;
+}
+
+.about-button:hover::before {
+  background: linear-gradient(to left, #ffffff, #690089);
+}

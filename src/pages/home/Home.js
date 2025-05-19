@@ -29,23 +29,26 @@ const Home = () => {
   return (
     <>
       <div className="landing-container">
-        <img src={firstImage} alt="Landing" className="landing-image" />
+        <img
+          src={firstImage}
+          alt="Landing"
+          className="landing-image img-fluid"
+        />
       </div>
 
       <div className="about-container">
-        <h2 className="about_heading">ABOUT US</h2>
+        <h2 className="about_heading p-3 display-1">ABOUT US</h2>
         <p className="about-description">
           AASRITHA INFRA PROJECTS IS A PREMIER PLAYER IN THE <br />
           <strong className="highlight">INFRASTRUCTURE DEVELOPMENT</strong>{" "}
           SECTOR, RENOWNED <br /> FOR DELIVERING HIGH-IMPACT, QUALITY-DRIVEN{" "}
-          <br />
-          PROJECTS ACROSS
+          <br /> PROJECTS ACROSS
           <strong className="highlight">
             {" "}
             RESIDENTIAL, COMMERCIAL,
           </strong> AND <strong className="highlight">INDUSTRIAL.</strong>
         </p>
-        <button className="about-button" ref={buttonRef}>
+        <button className="about-button mt-4" ref={buttonRef}>
           Know More
         </button>
       </div>

@@ -158,3 +158,11 @@
 .enquiry-button:hover {
   opacity: 0.9;
 }
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  /* optionally add to vertically center if needed */
+  /* align-items: center; */
+}
+

@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 import LOGO from "./assets/logo.png";
-import { FiPhone } from "react-icons/fi";
+
+// import { FiPhone } from "react-icons/fi";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,7 +22,6 @@ const Navbar = () => {
       const currentScrollY = window.scrollY;
       const goingDown = currentScrollY > lastScrollYRef.current;
 
-      // Set scrolled navbar visibility
       setScrolled(currentScrollY > 50);
 
       if (!isMobile) {
@@ -48,9 +49,9 @@ const Navbar = () => {
   return (
     <>
       {(!scrolled || isMobile) && (
-        <nav className="navbar main-navbar">
-          <div className="navbar-logo">
-            <img src="/assets/logo.png" alt="logo" className="logo-img1" />{" "}
+        <nav className="navbar1 main-navbar">
+          <div className="navbar1-logo">
+            <img src={LOGO} alt="logo" className="logo-img1 img-fluid" />
           </div>
           <div className="hamburger" onClick={() => setMenuOpen(true)}>
             &#9776;
@@ -58,27 +59,34 @@ const Navbar = () => {
         </nav>
       )}
 
-      {/* Scrolled Navbar for Desktop */}
       {!isMobile && scrolled && showScrolledNavbar && (
-        <nav className="navbar scrolled-navbar">
-          <div className="navbar-logo">
-            <img src={LOGO} alt="logo" className="logo-img" />
+        <nav className="navbar1 scrolled-navbar1">
+          <div className="navbar1-logo">
+            <Link to="/">
+              <img src={LOGO} alt="logo" className="logo-img" />
+            </Link>
           </div>
           <div className="nav-links-inline">
-            {/* //{({isActive}) => isActive ? 'nav-links-inline': 'nav-link1'} */}
-            <span>HOME</span>
-            <span>ABOUT US</span>
-            <span>PROJECT</span>
-            <span>CONTACT</span>
-            <span className="contact_icon">
-              {" "}
-              <FiPhone />{" "}
-            </span>
+            <Link to="/" className="nav-item">
+              HOME
+            </Link>
+            <Link to="/about" className="nav-item">
+              ABOUT US
+            </Link>
+            <Link to="/projects" className="nav-item">
+              PROJECT
+            </Link>
+            <Link to="/contact" className="nav-item">
+              CONTACT
+            </Link>
+
+            {/* <span className="contact_icon">
+              <FiPhone />
+            </span> */}
           </div>
         </nav>
       )}
 
-      {/* Popup Menu for Mobile and  desktop*/}
       {menuOpen && (
         <div className="menu-overlay">
           <div className="menu-content">

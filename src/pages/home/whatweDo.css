@@ -1,31 +1,20 @@
-/* .wedo{
-    height: 801px;
-    width: auto;
-    background-color: #F0F0F0;
-    margin-top: 20px;
-}
-
-.wedoHead{
-    font-weight: 300;
-    font-size: 53px;
-    letter-spacing: 0.5px;
-    padding-top: 318px;
-    padding-left: 80px;
-    height: 144px;
-
-} */
-
 .wedo-container {
     width: 100%;
-    /* max-width: 100vh; */
-    /* max-width: 1200px; */
     margin: 0 auto;
-    height: 700px;
+    height: auto;
     padding: 2rem;
     background-color: #F0F0F0;
     overflow: hidden;
   }
   
+  .wedomob{
+    font-weight: 300;
+  }
+
+   .wedomob1{
+    font-weight: 400;
+  }
+
   .wedo {
     display: flex;
     justify-content: space-between;
@@ -77,7 +66,6 @@
     text-align: center;
     background: rgba(0, 0, 0, 0.5); 
     color: white;
-    font-size: 14px;
     font-weight: 500;
   }
   
