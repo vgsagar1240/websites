@@ -48,14 +48,27 @@ const Footer = () => {
 
       <div className="footer-last container">
         <div className="footer-bottom text-secondary">
-          © 2024 Copyrights By Aasritha Infra Projects. All Rights Reserved
+          © {new Date().getFullYear()} Copyrights By Aasritha Infra Projects.
+          All Rights Reserved
         </div>
         <div className="footer-right">
           <div className="social-icons">
-            <i className="fab fa-twitter"></i>
+            <i className="fab fa-instagram"></i>
             <i className="fab fa-linkedin-in"></i>
-            <i className="fab fa-youtube"></i>
-            <i className="fab fa-facebook-f"></i>
+            <a
+              href="https://www.youtube.com/@AasrithaInfraProjects"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-youtube"></i>
+            </a>{" "}
+            <a
+              href="https://www.facebook.com/aasrithainfra"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-facebook-f"></i>
+            </a>
           </div>
         </div>
       </div>

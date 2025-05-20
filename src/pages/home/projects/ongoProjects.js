@@ -6,6 +6,7 @@ import aeromansions from "../../../assets/AeroMansions.jpg";
 import aeroresorts from "../../../assets/AeroResorts.jpg";
 import aeroconvensions from "../../../assets/AeroConvensions.jpg";
 import CustomButton from "../../../components/CustomButton";
+import { Link } from "react-router-dom";
 
 const OngoProjects = () => {
   return (
@@ -138,10 +139,9 @@ const OngoProjects = () => {
         </div>
 
         <div className="ongobtn">
-          <CustomButton
-            text="Know More"
-            onClick={() => console.log("Clicked")}
-          />
+          <Link to="/projects">
+            <CustomButton text="View More" />
+          </Link>
         </div>
       </div>
     </>

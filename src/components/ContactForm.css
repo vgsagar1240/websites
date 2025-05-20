@@ -104,3 +104,12 @@ textarea {
   position: relative;
   top: -10px;
 }
+
+.text-danger {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+

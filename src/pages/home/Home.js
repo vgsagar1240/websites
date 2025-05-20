@@ -5,6 +5,7 @@ import WhatweDo from "./whatweDo";
 import OngoProjects from "./projects/ongoProjects";
 import Textfield from "./text_filed";
 import WhyWeChoose from "../../sections/WhyWeChoose";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const buttonRef = useRef(null);
@@ -48,9 +49,11 @@ const Home = () => {
             RESIDENTIAL, COMMERCIAL,
           </strong> AND <strong className="highlight">INDUSTRIAL.</strong>
         </p>
-        <button className="about-button mt-4" ref={buttonRef}>
-          Know More
-        </button>
+        <Link to="/about">
+          <button className="about-button mt-4" ref={buttonRef}>
+            Know More
+          </button>
+        </Link>
       </div>
 
       <WhatweDo />

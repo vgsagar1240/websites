@@ -5,6 +5,7 @@
   }
   body, html {
     overflow-x: hidden;
+    scroll-behavior: smooth;
   }
   
   /* navbar1 container */
@@ -90,6 +91,23 @@
     text-decoration: none;
     color: inherit;
   }
+
+  .nav-item {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+  color: #f4b400;
+}
+
+.nav-item.active {
+  color: #f4b400; /* Highlight active link */
+  font-weight: bold;
+  border-bottom: 2px solid #f4b400;
+}
   
 
   
@@ -217,7 +235,21 @@
     margin: 1rem 0;
     font-size: 1.5rem;
     cursor: pointer;
+    text-decoration: none;
+    color: white;
   }
+
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    display: inline-block;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #f4b400; /* Example hover effect */
+}
   
   /* Close icon */
   .close-icon {

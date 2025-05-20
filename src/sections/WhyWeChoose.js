@@ -1,6 +1,7 @@
 import React from "react";
 import "./WhyWeChoose.css";
 import CustomButton from "../components/CustomButton";
+import { Link } from "react-router-dom";
 
 const whyWeChooseItems = [
   {
@@ -71,7 +72,9 @@ const WhyWeChoose = () => {
         <h3 className="display-4">CREATING TOMORROW’S LANDMARKS</h3>
         <p className="display-5">WITH TODAY’S VISION AND PRECISION.</p>
         <div className="flex justify-center" style={{ marginRight: "17%" }}>
-          <CustomButton text="Enquiry" onClick={() => console.log("Clicked")} />
+          <Link to="/contact">
+            <CustomButton text="Enquiry" />
+          </Link>
         </div>
       </div>
     </section>
