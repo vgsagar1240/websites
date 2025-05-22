@@ -34,13 +34,12 @@ const OngoProjects = () => {
                   Villas
                 </div>
                 <div className="content-center">
-                  <p>
-                    Gated luxury villa community designed with lifestyle
-                    amenities.
-                    <br />
-                    <span>SHAMSHABAD</span>
-                  </p>
-                </div>
+                    <div className="d-none d-md-block">
+                      <p>Gated luxury villa community designed with lifestyle amenities.</p>
+                    </div>
+
+                    <p className="d-block d-sm-block d-md-none">SHAMSHABAD</p>
+                  </div>
               </div>
             </div>
 
@@ -57,13 +56,12 @@ const OngoProjects = () => {
                   AERO <br /> Homes
                 </div>
                 <div className="content-center">
-                  <p>
-                    Gated luxury villa community designed with lifestyle
-                    amenities.
-                    <br />
-                    <span>SHAMSHABAD</span>
-                  </p>
+                <div className="d-none d-md-block">
+                  <p>Independent homes with smart layouts and urban connectivity.</p>
                 </div>
+
+                <p className="d-block d-sm-block d-md-none">SHAMSHABAD</p>
+              </div>
               </div>
             </div>
 
@@ -80,14 +78,13 @@ const OngoProjects = () => {
                   AERO <br />
                   Mansions
                 </div>
-                <div className="content-center">
-                  <p>
-                    Gated luxury villa community designed with lifestyle
-                    amenities.
-                    <br />
-                    <span>SHAMSHABAD</span>
-                  </p>
-                </div>
+                            <div className="content-center">
+                        <div className="d-none d-md-block">
+                          <p>Ultra-premium mansions in a gated estate.</p>
+                        </div>
+
+                        <p className="d-block d-sm-block d-md-none">SHAMSHABAD</p>
+                      </div>
               </div>
             </div>
 
@@ -104,13 +101,12 @@ const OngoProjects = () => {
                   AERO <br />
                   Resorts
                 </div>
-                <div className="content-center">
-                  <p>
-                    Gated luxury villa community designed with lifestyle
-                    amenities.
-                    <br />
-                    <span>SHAMSHABAD</span>
-                  </p>
+                   <div className="content-center">
+                  <div className="d-none d-md-block">
+                    <p>Luxury resorts combining leisure and nature.</p>
+                  </div>
+
+                  <p className="d-block d-sm-block d-md-none">SHAMSHABAD</p>
                 </div>
               </div>
             </div>
@@ -126,13 +122,12 @@ const OngoProjects = () => {
                   Conventions
                 </div>
                 <div className="content-center">
-                  <p>
-                    Gated luxury villa community designed with lifestyle
-                    amenities.
-                    <br />
-                    <span>SHAMSHABAD</span>
-                  </p>
-                </div>
+                    <div className="d-none d-md-block">
+                      <p>State-of-the-art venue for large events and exhibitions.</p>
+                    </div>
+
+                    <p className="d-block d-sm-block d-md-none">SHAMSHABAD</p>
+                  </div>
               </div>
             </div>
           </div>

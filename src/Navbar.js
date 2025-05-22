@@ -50,18 +50,19 @@ const Navbar = () => {
 
   return (
     <>
-      {(!scrolled || isMobile) && (
-        <nav className="navbar1 main-navbar">
-          <div className="navbar1-logo">
-            <Link to="/">
-              <img src={LOGO} alt="logo" className="logo-img1 img-fluid" />
-            </Link>
-          </div>
-          <div className="hamburger" onClick={() => setMenuOpen(true)}>
-            &#9776;
-          </div>
-        </nav>
-      )}
+     {(!scrolled || isMobile) && (
+          <nav className={`navbar1 main-navbar ${scrolled ? "scrolled" : ""}`}>
+            <div className="navbar1-logo">
+              <Link to="/">
+                <img src={LOGO} alt="logo" className="logo-img1 img-fluid" />
+              </Link>
+            </div>
+            <div className="hamburger" onClick={() => setMenuOpen(true)}>
+              &#9776;
+            </div>
+          </nav>
+        )}
+
 
       {!isMobile && scrolled && (
         <nav

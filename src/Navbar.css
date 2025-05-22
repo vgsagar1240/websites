@@ -54,6 +54,29 @@
     background-color: white;
     border-bottom: 1px solid #ddd;
   } */
+
+  /* Default mobile navbar background (transparent or white) */
+.navbar1.main-navbar {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+/* When scrolled on mobile, navbar background turns black */
+.navbar1.main-navbar.scrolled {
+  background-color: black;
+}
+
+.hamburger {
+  color: black;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar1.main-navbar.scrolled .hamburger {
+  color: white;
+}
+
   
   /* Scrolled navbar1 */
  .scrolled-navbar1 {
@@ -259,18 +282,49 @@
     font-size: 2rem;
     cursor: pointer;
   }
-  .contact_icon {
-    background-color: white;
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    color: #00000080;
-    padding: 5px;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-    text-align: center;
+  
+  @media screen and (max-width: 768px) {
+  .logo-img1 {
+    max-height: 80px; 
+  }
+
+   .menu-overlay::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      120deg,
+      white 0%,
+      white 40%,
+      black 60%,
+      black 100%
+    );
+    animation: colorSlide 1.2s ease forwards;
+    z-index: -1;
   }
   
+  /* Menu Content (remains the same or with minor improvements) */
+  .menu-content {
+    display: flex;
+    width: 80%;
+    height: 80%;
+    /* border: 2px solid #ccc; */
+    position: relative;
+    max-width: 1200px;
+    background-color: transparent;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+    color: white;
+  }
+    .close-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+}
   
   
