@@ -7,6 +7,7 @@ import aeroresorts from "../../../assets/AeroResorts.jpg";
 import aeroconvensions from "../../../assets/AeroConvensions.jpg";
 import CustomButton from "../../../components/CustomButton";
 import { Link } from "react-router-dom";
+import aero_gold from "../../../assets/aero_gold.png"
 
 const OngoProjects = () => {
   return (
@@ -29,13 +30,11 @@ const OngoProjects = () => {
               </div>
               <div className="content">
                 <div className="logo1">
-                  Aero
-                  <br />
-                  Villas
+                  <img src={aero_gold} alt="logo"/>
                 </div>
                 <div className="content-center">
                     <div className="d-none d-md-block">
-                      <p>Gated luxury villa community designed with lifestyle amenities.</p>
+                      <p className="fs-6">Gated luxury villa community designed with lifestyle amenities @SHAMSHABAD.</p>
                     </div>
 
                     <p className="d-block d-sm-block d-md-none">SHAMSHABAD</p>
@@ -52,12 +51,12 @@ const OngoProjects = () => {
                 <div className="top-tag">Ongoing</div>
               </div>
               <div className="content">
-                <div className="logo1">
-                  AERO <br /> Homes
+                <div className="logo2">
+                  <span className="span2">AERO</span> <br /> <span className="span3">Homes</span>
                 </div>
                 <div className="content-center">
                 <div className="d-none d-md-block">
-                  <p>Independent homes with smart layouts and urban connectivity.</p>
+                  <p className="fs-6">Independent homes with smart layouts and urban connectivity @SHAMSHABAD.</p>
                 </div>
 
                 <p className="d-block d-sm-block d-md-none">SHAMSHABAD</p>
@@ -74,13 +73,12 @@ const OngoProjects = () => {
                 <div className="top-tag">Upcoming</div>
               </div>
               <div className="content">
-                <div className="logo1">
-                  AERO <br />
-                  Mansions
+                <div className="logo2">
+                  <span className="span2">AERO</span> <br /> <span className="span3">Mansions</span>
                 </div>
                             <div className="content-center">
                         <div className="d-none d-md-block">
-                          <p>Ultra-premium mansions in a gated estate.</p>
+                          <p>Ultra-premium mansions in a gated estate @SHAMSHABAD.</p>
                         </div>
 
                         <p className="d-block d-sm-block d-md-none">SHAMSHABAD</p>
@@ -97,13 +95,12 @@ const OngoProjects = () => {
                 <div className="top-tag">Upcoming</div>
               </div>
               <div className="content">
-                <div className="logo1">
-                  AERO <br />
-                  Resorts
+               <div className="logo2">
+                  <span className="span2">AERO</span> <br /> <span className="span3">Resorts</span>
                 </div>
                    <div className="content-center">
                   <div className="d-none d-md-block">
-                    <p>Luxury resorts combining leisure and nature.</p>
+                    <p>Luxury resorts combining leisure and nature @SHAMSHABAD.</p>
                   </div>
 
                   <p className="d-block d-sm-block d-md-none">SHAMSHABAD</p>
@@ -117,13 +114,12 @@ const OngoProjects = () => {
                 <div className="top-tag">Upcoming</div>
               </div>
               <div className="content">
-                <div className="logo1">
-                  AER0 <br />
-                  Conventions
+               <div className="logo2">
+                  <span className="span2">AERO</span> <br /> <span className="span3">Conventions Centers</span>
                 </div>
                 <div className="content-center">
                     <div className="d-none d-md-block">
-                      <p>State-of-the-art venue for large events and exhibitions.</p>
+                      <p>State-of-the-art venue for large events and exhibitions @SHAMSHABAD.</p>
                     </div>
 
                     <p className="d-block d-sm-block d-md-none">SHAMSHABAD</p>

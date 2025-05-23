@@ -25,16 +25,22 @@ const Footer = () => {
         </div>
 
         <div className="footer-middle">
-          <div className="footer-item">
-            <i className="fas fa-building footer-icon"></i>
-            <p>
-              2nd Floor, Plot No. 265, Trendz Inspire,
-              <br />
-              Kavuri Hills Road, CBI Colony, Madhapur,
-              <br />
-              Hyderabad-500033.
-            </p>
-          </div>
+          <a 
+                  className="footer-item" 
+                  href="https://maps.app.goo.gl/JCFYbQXHLnZukrcGA" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: 'none', color: 'inherit' }}
+                >
+                  <i className="fas fa-building footer-icon"></i>
+                  <p>
+                    Neha Hills, Satamrai colony,
+                    <br />
+                    Shamshabad, Telangana
+                    <br />
+                    501218.
+                  </p>
+                </a>
           <div className="footer-item">
             <i className="fas fa-phone footer-icon"></i>
             <div>
